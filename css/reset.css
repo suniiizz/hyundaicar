@@ -74,6 +74,7 @@ input,
 fieldset {
   border: 0 none;
   outline: none;
+  list-style: none;
 }
 
 img,
