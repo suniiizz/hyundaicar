@@ -12,6 +12,10 @@
   <link rel="icon" type="image/ico" href="img/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/reset.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -37,13 +41,13 @@
           <a href="#" class="btn-link">월드와이드</a>
         </li>
         <li class="nav_top_menu_inner">
-          <button class="lan-select">LANGUAGE</button>
+          <button type="button" class="lan-select">LANGUAGE</button>
         </li>
         <li class="nav_top_menu_inner">
           <a href="#">채용</a>
         </li>
         <li class="nav_top_menu_inner">
-          <button class="btn-search">검색</button>
+          <button type="button"  class="btn-search">검색</button>
         </li>
       </ul>
     </div>
@@ -83,12 +87,113 @@
 
   <!-- banner -->
   <section id="banner">
-    <div class="banner_wrap">
-      <div class="banner1"></div>
-      <!-- <div class="banner2"></div>
-      <div class="banner3"></div>
-      <div class="banner4"></div>
-      <div class="banner5"></div> -->
+    <div class="banner_wrap swiper mySwiper">
+      <div class="banner_set swiper-wrapper">
+        <div class="banner swiper-slide slide">
+          <picture>
+            <img src="img/main_1.jpg" alt="main_1">
+          </picture>
+          <div class="banner_btn_wrap">
+            <div class="banner_btn">
+              <a href="#"><span>AVANTE</span></a>
+              <a href="#"><span>AVANTE Hybrid</span></a>
+              <a href="#"><span>AVANTE N Line</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner swiper-slide slide">
+          <picture>
+            <img src="img/main_2.jpeg" alt="main_2">
+          </picture>
+          <div class="banner_btn_wrap">
+            <div class="banner_btn">
+              <a href="#"><span>바로가기</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner swiper-slide slide">
+          <picture>
+            <img src="img/main_3.jpg" alt="main_3">
+          </picture>
+          <div class="banner_btn_wrap">
+            <div class="banner_btn">
+              <a href="#"><span>PORTER II Special Vehicle</span></a>
+              <a href="#"><span>PORTER II EV Special Vehicle</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner swiper-slide slide">
+          <picture>
+            <img src="img/main_4.jpg" alt="main_4">
+          </picture>
+          <div class="banner_btn_wrap">
+            <div class="banner_btn">
+              <a href="#"><span>SANTA FE</span></a>
+              <a href="#"><span>SANTA FE Hybrid</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner swiper-slide slide">
+          <picture>
+            <img src="img/main_5.jpg" alt="main_5">
+          </picture>
+          <div class="banner_btn_wrap">
+            <div class="banner_btn">
+              <a href="#"><span>자세히 보기</span></a>
+              <a href="#"><span>내 차 만들기</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- 네비게이션 버튼 -->
+      <button type="button" class="swiper-button-next main_next">
+        <i class="ri-arrow-right-s-line"></i>
+        <!-- <span class="ir_su">다음 슬라이드</span> -->
+      </button>
+      <button type="button" class="swiper-button-prev main_prev">
+        <i class="ri-arrow-left-s-line"></i>
+        <!-- <span class="ir_su">이전 슬라이드</span> -->
+      </button>
+
+      <!-- 스크롤바 -->
+      <div class="scrollbar_wrap">
+        <div class="scrollbar_txt_wrap">
+          <ul class="scrollbar_txt_set">
+            <li class="scrollbar_txt">
+              <p>[AVANTE]</p>
+              <span>세상, 달라졌다.</span>
+            </li>
+            <li class="scrollbar_txt">
+              <p>[CASPER]</p>
+              <span>case by CASPER</span>
+            </li>
+            <li class="scrollbar_txt">
+              <p>[PORTER II Special Vehicle]</p>
+              <span>더욱 안전하고 스마트해지다</span>
+            </li>
+            <li class="scrollbar_txt">
+              <p>[SANTA FE]</p>
+              <span>패밀리 SUV의 진화</span>
+            </li>
+            <li class="scrollbar_txt">
+              <p>[PORTER II]</p>
+              <span>새로운 성공을 준비하다</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="scroll_btn">
+          <button type="button" class="scroll_toggle pause">
+            <span class="ir_su">재생</span>
+          </button>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -188,5 +293,43 @@
     <div class="footer_cont"></div>
   </footer>
   
+  <!-- script -->
+  <!-- swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <script>
+    //banner
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+      keyboard: {
+        enabled: true,
+      },
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
+      navigation: {
+        nextEl: ".swiper-button-next.main_next",
+        prevEl: ".swiper-button-prev.main_prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+        clickable: true,
+      },
+      // scrollbar : {
+      //   el : ".swiper-scrollbar",
+      //   draggable: true,
+      // },  
+    });
+
+    $('.scrollbar .scrollbar_txt').click(function(){
+      var index = $(this).index();
+      swiper.slideTo(index + 0.5);
+    })
+
+  </script>
+
 </body>
 </html>
