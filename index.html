@@ -153,40 +153,51 @@
       <!-- 네비게이션 버튼 -->
       <button type="button" class="swiper-button-next main_next">
         <i class="ri-arrow-right-s-line"></i>
-        <!-- <span class="ir_su">다음 슬라이드</span> -->
+        <span class="ir_su">다음 슬라이드</span>
       </button>
       <button type="button" class="swiper-button-prev main_prev">
         <i class="ri-arrow-left-s-line"></i>
-        <!-- <span class="ir_su">이전 슬라이드</span> -->
+        <span class="ir_su">이전 슬라이드</span>
       </button>
 
-      <!-- 스크롤바 -->
+      <!-- 스크롤바 텍스트 -->
       <div class="scrollbar_wrap">
-        <div class="scrollbar_txt_wrap">
+        <div class="scrollbar">
           <ul class="scrollbar_txt_set">
-            <li class="scrollbar_txt">
-              <p>[AVANTE]</p>
-              <span>세상, 달라졌다.</span>
+            <li>
+              <button class="scrollbar_txt active">
+                <p>[AVANTE]</p>
+                <span>세상, 달라졌다.</span>
+              </button>
             </li>
-            <li class="scrollbar_txt">
-              <p>[CASPER]</p>
-              <span>case by CASPER</span>
+            <li>
+              <button class="scrollbar_txt">
+                <p>[CASPER]</p>
+                <span>case by CASPER</span>
+              </button>
             </li>
-            <li class="scrollbar_txt">
-              <p>[PORTER II Special Vehicle]</p>
-              <span>더욱 안전하고 스마트해지다</span>
+            <li>
+              <button class="scrollbar_txt">
+                <p>[PORTER II Special Vehicle]</p>
+                <span>더욱 안전하고 스마트해지다</span>
+              </button>
             </li>
-            <li class="scrollbar_txt">
-              <p>[SANTA FE]</p>
-              <span>패밀리 SUV의 진화</span>
+            <li>
+              <button class="scrollbar_txt">
+                <p>[SANTA FE]</p>
+                <span>패밀리 SUV의 진화</span>
+              </button>
             </li>
-            <li class="scrollbar_txt">
-              <p>[PORTER II]</p>
-              <span>새로운 성공을 준비하다</span>
+            <li>
+              <button class="scrollbar_txt">
+                <p>[PORTER II]</p>
+                <span>새로운 성공을 준비하다</span>
+              </button>
             </li>
           </ul>
         </div>
 
+        <!-- 스크롤바 컨트롤 -->
         <div class="scroll_btn">
           <button type="button" class="scroll_toggle pause">
             <span class="ir_su">재생</span>
@@ -201,7 +212,19 @@
   <section id="contents_wrap">
 
     <!-- login -->
-    <div class="login"></div>
+    <div class="login">
+      <div class="login_container">
+        <div class="login_txt">
+          <span>
+            로그인 하시고 현대자동차의 편리하고 다양한 맞춤형 서비스를 이용해 보세요.
+          </span>
+          <ul class="login_before">
+            <li class="login_before_inner"><a href="#">로그인</a></li>
+            <li class="login_before_inner"><a href="#">회원가입</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!-- contents -->
     <div class="contents">
@@ -210,13 +233,21 @@
 
         <div class="tab_menu">
           <ul class="tab_menu_wrap">
-            <li class="tab_menu_btn"></li>
-            <li class="tab_menu_btn2"></li>
+            <li>
+              <button type="button" class="tab_menu_btn active" data-tab="tab-1">
+                <span>신차 구매 정보</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="tab_menu_btn" data-tab="tab-2">
+                <span>블루멤버스 및 차량 관리 정보</span>
+              </button>
+            </li>
           </ul>
         </div>
         
         <!-- tabmenu1 newcar -->
-        <div class="newcar">
+        <div id="tab-1" class="newcar tab-content active">
 
           <!-- benefit -->
           <div class="benefit">
@@ -255,7 +286,7 @@
         </div> 
 
         <!-- tabmenu2 bluemembers -->
-        <div class="bluemembers"></div>
+        <div class="bluemembers tab_2"></div>
 
       </div>
 
@@ -315,19 +346,28 @@
       },
       pagination: {
         el: ".swiper-pagination",
-        type: "progressbar",
         clickable: true,
       },
-      // scrollbar : {
-      //   el : ".swiper-scrollbar",
-      //   draggable: true,
-      // },  
     });
 
-    $('.scrollbar .scrollbar_txt').click(function(){
+    $('.scrollbar li').click(function(){
       var index = $(this).index();
       swiper.slideTo(index + 0.5);
     })
+
+    //tabmenu
+    $(document).ready(function(){
+  
+    $('.tab_menu_btn').click(function(){
+        var tab_id = $(this).attr('data-tab');
+
+        $('.tab_menu_btn').removeClass('active');
+        $('.tab-content').removeClass('active');
+
+        $(this).addClass('active');
+        $("#" + tab_id).addClass('active');
+      })
+    });
 
   </script>
 
