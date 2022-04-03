@@ -198,8 +198,8 @@
         </div>
 
         <!-- 스크롤바 컨트롤 -->
-        <div class="scroll_btn">
-          <button type="button" class="scroll_toggle pause">
+        <div class="scroll_control_btn">
+          <button type="button" class="scroll_control pause">
             <span class="ir_su">재생</span>
           </button>
         </div>
@@ -350,16 +350,25 @@
       },
     });
 
-    $('.scrollbar li').click(function(){
-      var index = $(this).index();
-      swiper.slideTo(index + 0.5);
-    })
+    $('.scrollbar_txt_set li').click(function(){
+      let idx = $(this).index();
+      swiper.slideTo(idx + 0.5);
+
+      $('.scrollbar_txt').removeClass('active');
+      $('.scrollbar_txt').eq(idx).addClass('active');
+    });
+
+    // $('.scrollbar_txt_set li').click(function(){
+    //   var idx = $(this).index();
+    //   $('.scrollbar_txt').removeClass('active');
+    //   $('.scrollbar_txt').eq(idx).addClass('active');
+    // });
 
     //tabmenu
     $(document).ready(function(){
   
     $('.tab_menu_btn').click(function(){
-        var tab_id = $(this).attr('data-tab');
+        let tab_id = $(this).attr('data-tab');
 
         $('.tab_menu_btn').removeClass('active');
         $('.tab-content').removeClass('active');

@@ -238,7 +238,11 @@ ul {
 .scrollbar {
   overflow: hidden;
   position: relative;
-  height: 4px;
+  height: 3px;
+}
+
+.banner_wrap:hover .scrollbar {
+  overflow: visible;
 }
 
 .scrollbar_txt_set {
@@ -269,15 +273,20 @@ ul {
   border-color: #fff;
 }
 
-.scroll_btn {
+.scrollbar_txt.active {
+  color: var(--sec-white);
+  border-color: #fff;
+}
+
+.scroll_control_btn {
   display: flex;
   flex-direction: column;
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -8px;
 }
 
-.scroll_toggle {
+.scroll_control {
   margin-top: 15px;
   position: relative;
   width: 18px;
@@ -287,7 +296,7 @@ ul {
   vertical-align: middle;
 }
 
-.scroll_toggle::before {
+.scroll_control::before {
   content: "";
   position: absolute;
   left: calc(50% - 2px);
