@@ -283,7 +283,7 @@ ul {
   flex-direction: column;
   position: absolute;
   right: 0;
-  bottom: -8px;
+  bottom: -6px;
 }
 
 .scroll_control {
@@ -310,7 +310,21 @@ ul {
   border-bottom: 4px solid transparent;
 }
 
-.main_next {
+.scroll_control.on::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 3px);
+  top: calc(50% - 4px);
+  display: block;
+  width: 2px;
+  height: 8px;
+  border: 2px solid #fff;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.banner_next {
   right: 0 !important;
   width: 44px !important;
   font-size: 30px;
@@ -318,7 +332,7 @@ ul {
   background-color: rgba(31,45,61,.4);
 }
 
-.main_prev {
+.banner_prev {
   left: 0 !important;
   width: 44px !important;
   font-size: 30px;

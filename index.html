@@ -151,16 +151,16 @@
       </div>
     
       <!-- 네비게이션 버튼 -->
-      <button type="button" class="swiper-button-next main_next">
+      <button type="button" class="swiper-button-next banner_next">
         <i class="ri-arrow-right-s-line"></i>
         <span class="ir_su">다음 슬라이드</span>
       </button>
-      <button type="button" class="swiper-button-prev main_prev">
+      <button type="button" class="swiper-button-prev banner_prev">
         <i class="ri-arrow-left-s-line"></i>
         <span class="ir_su">이전 슬라이드</span>
       </button>
 
-      <!-- 스크롤바 텍스트 -->
+      <!-- 스크롤 텍스트 -->
       <div class="scrollbar_wrap">
         <div class="scrollbar">
           <ul class="scrollbar_txt_set">
@@ -197,11 +197,14 @@
           </ul>
         </div>
 
-        <!-- 스크롤바 컨트롤 -->
-        <div class="scroll_control_btn">
-          <button type="button" class="scroll_control pause">
+        <!-- 스크롤 컨트롤 -->
+        <div class="scroll_control_btn slide_btn">
+          <button type="button" class="scroll_control">
             <span class="ir_su">재생</span>
           </button>
+          <!-- <button type="button" class="scroll_control pause">
+            <span class="ir_su">정지</span>
+          </button> -->
         </div>
 
       </div>
@@ -332,7 +335,7 @@
   <script>
     //banner
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
+      slidesPerView: 1,
       keyboard: {
         enabled: true,
       },
@@ -341,15 +344,12 @@
       //   disableOnInteraction: false,
       // },
       navigation: {
-        nextEl: ".swiper-button-next.main_next",
-        prevEl: ".swiper-button-prev.main_prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+        nextEl: ".swiper-button-next.banner_next",
+        prevEl: ".swiper-button-prev.banner_prev",
+      }
     });
 
+    //banner scroll
     $('.scrollbar_txt_set li').click(function(){
       let idx = $(this).index();
       swiper.slideTo(idx + 0.5);
@@ -358,10 +358,19 @@
       $('.scrollbar_txt').eq(idx).addClass('active');
     });
 
-    // $('.scrollbar_txt_set li').click(function(){
-    //   var idx = $(this).index();
-    //   $('.scrollbar_txt').removeClass('active');
-    //   $('.scrollbar_txt').eq(idx).addClass('active');
+    $('.scroll_control_btn').click(function(){
+      $('.scroll_control').toggle();
+      $(this).toggleClass("on");
+      swiper.autoplay.start();
+      return false;
+    });
+    // $('.start').on('click',function(){
+    //   swiper.autoplay.start();
+    //   return false;
+    // })
+    // $('.pause').on('click',function(){
+    //   swiper.autoplay.stop();
+    //   return false;
     // });
 
     //tabmenu
