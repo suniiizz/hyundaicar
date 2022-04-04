@@ -160,6 +160,8 @@
         <span class="ir_su">이전 슬라이드</span>
       </button>
 
+      <div class="swiper-scrollbar"></div>
+
       <!-- 스크롤 텍스트 -->
       <div class="scrollbar_wrap">
         <div class="scrollbar">
@@ -198,12 +200,12 @@
         </div>
 
         <!-- 스크롤 컨트롤 -->
-        <div class="scroll_control_btn slide_btn">
+        <div class="scroll_control_btn">
           <button type="button" class="scroll_control">
-            <span class="ir_su">재생</span>
+            <span class="ir_su">정지</span>
           </button>
           <!-- <button type="button" class="scroll_control pause">
-            <span class="ir_su">정지</span>
+            <span class="ir_su">재생</span>
           </button> -->
         </div>
 
@@ -254,11 +256,64 @@
 
           <!-- benefit -->
           <div class="benefit">
+            <h2 class="benefit_tit">이달의 혜택</h2>
             <ul class="benefit_set">
-              <li class="benefit_item"></li>
-              <li class="benefit_item"></li>
-              <li class="benefit_item"></li>
-              <li class="benefit_item"></li>
+              <li class="benefit_item">
+                <div class="benefit_item_inner">
+                  <h4>아반떼</h4>
+                  <div class="benefit_img">
+                    <img src="img/avante-22my-45side.png" alt="아반떼">
+                  </div>
+                  <strong>최대 95만원 할인</strong>
+                  <p>Save Auto 30만</p>
+                  <div class="benefit_btn_wrap">
+                    <a href="#"><span>혜택보기</span></a>
+                    <a href="#"><span>구매 상담 신청</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="benefit_item">
+                <div class="benefit_item_inner">
+                  <h4>아반떼</h4>
+                  <div class="benefit_img">
+                    <img src="img/avante-22my-45side.png" alt="아반떼">
+                  </div>
+                  <strong>최대 95만원 할인</strong>
+                  <p>Save Auto 30만</p>
+                  <div class="benefit_btn_wrap">
+                    <a href="#"><span>혜택보기</span></a>
+                    <a href="#"><span>구매 상담 신청</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="benefit_item">
+                <div class="benefit_item_inner">
+                  <h4>아반떼</h4>
+                  <div class="benefit_img">
+                    <img src="img/avante-22my-45side.png" alt="아반떼">
+                  </div>
+                  <strong>최대 95만원 할인</strong>
+                  <p>Save Auto 30만</p>
+                  <div class="benefit_btn_wrap">
+                    <a href="#"><span>혜택보기</span></a>
+                    <a href="#"><span>구매 상담 신청</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="benefit_item">
+                <div class="benefit_item_inner">
+                  <h4>아반떼</h4>
+                  <div class="benefit_img">
+                    <img src="img/avante-22my-45side.png" alt="아반떼">
+                  </div>
+                  <strong>최대 95만원 할인</strong>
+                  <p>Save Auto 30만</p>
+                  <div class="benefit_btn_wrap">
+                    <a href="#"><span>혜택보기</span></a>
+                    <a href="#"><span>구매 상담 신청</span></a>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -331,18 +386,21 @@
   <!-- swiper -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-
   <script>
     //banner
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
+      touchRatio: 0,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
       keyboard: {
         enabled: true,
       },
-      // autoplay: {
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       navigation: {
         nextEl: ".swiper-button-next.banner_next",
         prevEl: ".swiper-button-prev.banner_prev",
@@ -358,24 +416,30 @@
       $('.scrollbar_txt').eq(idx).addClass('active');
     });
 
-    $('.scroll_control_btn').click(function(){
-      $('.scroll_control').toggle();
-      $(this).toggleClass("on");
+
+    // $('.scroll_control').on('mouseover', function(){
+    //   swiper.autoplay.stop();
+    // });
+    // $('.scroll_control').on('mouseout', function(){
+    //   swiper.autoplay.start();
+    // });
+
+    $('.scroll_control').on('click',function(){
+      $(this).toggleClass('pause');
+      $('.scroll_control span').text('재생');
+      swiper.autoplay.stop();
+      return false;
+    });
+
+    $('.scroll_control.pause').on('click',function(){
+      $('.scroll_control.pause > span').text('정지');
       swiper.autoplay.start();
       return false;
     });
-    // $('.start').on('click',function(){
-    //   swiper.autoplay.start();
-    //   return false;
-    // })
-    // $('.pause').on('click',function(){
-    //   swiper.autoplay.stop();
-    //   return false;
-    // });
 
     //tabmenu
     $(document).ready(function(){
-  
+
     $('.tab_menu_btn').click(function(){
         let tab_id = $(this).attr('data-tab');
 
