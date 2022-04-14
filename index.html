@@ -12,6 +12,7 @@
   <link rel="icon" type="image/ico" href="img/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -87,7 +88,7 @@
 
   <!-- banner -->
   <section id="banner">
-    <div class="banner_wrap swiper1 mySwiper">
+    <div class="banner_wrap banner_slide mySwiper">
       <div class="banner_set swiper-wrapper">
         <div class="banner swiper-slide slide">
           <picture>
@@ -145,18 +146,6 @@
           </div>
         </div>
       </div>
-    
-      <!-- 네비게이션 버튼 -->
-      <button type="button" class="swiper-button-next banner_next">
-        <i class="ri-arrow-right-s-line"></i>
-        <span class="ir_su">다음 슬라이드</span>
-      </button>
-      <button type="button" class="swiper-button-prev banner_prev">
-        <i class="ri-arrow-left-s-line"></i>
-        <span class="ir_su">이전 슬라이드</span>
-      </button>
-
-      <!-- <div class="swiper-scrollbar"></div> -->
 
       <!-- 스크롤 텍스트 -->
       <div class="scrollbar_wrap">
@@ -194,17 +183,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- 스크롤 컨트롤 -->
-        <div class="scroll_control_btn">
-          <button type="button" class="scroll_control">
-            <span class="ir_su">정지</span>
-          </button>
-          <!-- <button type="button" class="scroll_control pause">
-            <span class="ir_su">재생</span>
-          </button> -->
-        </div>
-
       </div>
     </div>
   </section>
@@ -859,12 +837,18 @@
               </div>
               <div class="filter_box_wrap">
                 <a href="#">
-                  <span>상세모델검색</span>
-                  <p>꼭 필요한 사양이 포함된 모델을 <br> 검색해 보세요.</p>
+                  <i class="icon filter_bar_search"><span class="ir_su">내 차 추천받기 아이콘</span></i>
+                  <div class="a_list">
+                    <span>상세모델검색</span>
+                    <p>꼭 필요한 사양이 포함된 모델을 <br> 검색해 보세요.</p>
+                  </div>
                 </a>
                 <a href="#">
-                  <span>내 차 추천받기</span>
-                  <p>라이프 스타일에 맞는 모델을 <br> 추천해 드립니다.</p>
+                  <i class="icon filter_bar_find"><span class="ir_su">내 차 추천받기 아이콘</span></i>
+                  <div class="a_list">
+                    <span>내 차 추천받기</span>
+                    <p>라이프 스타일에 맞는 모델을 <br> 추천해 드립니다.</p>
+                  </div>
                 </a>
               </div>
             </div>
@@ -872,10 +856,55 @@
 
           <!-- explorer -->
           <div class="explorer">
-            <div class="explorer_cont"></div>
-            <div class="explorer_cont2">
-              <div class="explorer_item"></div>
-              <div class="explorer_item"></div>
+            <h2 class="explorer_tit">차량 탐색</h2>
+            <div class="explorer_cont_top">
+              <div class="explorer_tabmenu">
+                <div class="explorer_tabmenu_txt">
+                  <h3>판매량 TOP 3</h3>
+                  <span>최근 한 달 동안 다른 사람들이 가장 많이 구매한 모델입니다.</span>
+                </div>
+                <ul class="explorere_tabmenu_list">
+                  <li><button><span>전체</span></button></li>
+                  <li><button><span>2~30대</span></button></li>
+                  <li><button><span>40대</span></button></li>
+                  <li><button><span>50대</span></button></li>
+                </ul>
+              </div>
+            </div>
+            <div class="explorer_cont_bottom">
+              <div class="explorer_cont_layer">
+                <div class="explorer_item">
+                  <div class="explorer_item_tit">
+                    <strong>1위</strong>
+                    <div class="explorer_model_tit">
+                      <h3>그랜저</h3>
+                      <span>Le Blanc(르블랑)</span>
+                    </div>
+                  </div>
+                  <ul class="explorer_item_txt">
+                    <li>
+                      <span>엔진</span>
+                      <strong>스마트스트림 가솔린 2.5</strong>
+                    </li>
+                    <li>
+                      <span>표준연비</span>
+                      <strong>11.6 km/ℓ</strong>
+                    </li>
+                  </ul>
+                  <div class="explorer_item_btn">
+                    <a href="#">
+                      <span>내 차 만들기</span>
+                    </a>
+                  </div>
+                  <div class="explorer_item_img">
+                    <img src="img/main-grandeur-21my-well-side.webp" alt="그랜저">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="explorer_cont_inner">
+              <div class="explorer_inner"></div>
             </div>
           </div>
 
@@ -888,12 +917,18 @@
               </div>
               <div class="reservation_box_wrap">
                 <a href="#">
-                  <span>시승신청</span>
-                  <p>드라이빙라운지에서 실제 차량을 <br> 시승해보세요.</p>
+                  <i class="icon reservation_box_driving"><span class="ir_su">시승신청 아이콘</span></i>
+                  <div class="a_list">
+                    <span>시승신청</span>
+                    <p>드라이빙라운지에서 실제 차량을 <br> 시승해보세요.</p>
+                  </div>
                 </a>
                 <a href="#">
-                  <span>판매/시승 네트워크 검색</span>
-                  <p>지점/대리점, 전시차량 카마스터 등 <br> 다양한 정보를 제공합니다.</p>
+                  <i class="icon reservation_box_sale"><span class="ir_su">영업점 조회 아이콘</span></i>
+                  <div class="a_list">
+                    <span>판매/시승 네트워크 검색</span>
+                    <p>지점/대리점, 전시차량 카마스터 등 <br> 다양한 정보를 제공합니다.</p>  
+                  </div>
                 </a>
               </div>
             </div>
@@ -1159,23 +1194,9 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script>
     //banner
-    let swiper = new Swiper(".swiper1.mySwiper", {
+    let swiper = new Swiper(".banner_slide.mySwiper", {
       slidesPerView: 1,
       touchRatio: 0,
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-      keyboard: {
-        enabled: true,
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".banner_next.swiper-button-next",
-        prevEl: ".banner_prev.swiper-button-prev",
-      }
     });
 
     //banner scroll
@@ -1185,27 +1206,6 @@
 
       $('.scrollbar_txt').removeClass('active');
       $('.scrollbar_txt').eq(idx).addClass('active');
-    });
-
-
-    // $('.scroll_control').on('mouseover', function(){
-    //   swiper.autoplay.stop();
-    // });
-    // $('.scroll_control').on('mouseout', function(){
-    //   swiper.autoplay.start();
-    // });
-
-    $('.scroll_control').on('click',function(){
-      $(this).toggleClass('pause');
-      $('.scroll_control span').text('재생');
-      swiper.autoplay.stop();
-      return false;
-    });
-
-    $('.scroll_control.pause').on('click',function(){
-      $('.scroll_control.pause > span').text('정지');
-      swiper.autoplay.start();
-      return false;
     });
 
     //main tabmenu
