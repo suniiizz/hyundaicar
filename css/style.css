@@ -550,7 +550,7 @@ h3 {
 
 /* lineup */
 .lineup {
-  padding: 80px 0 0;
+  padding: 80px 0 80px;
   background-color:var(--sec-bg-grey);
 }
 
@@ -614,10 +614,20 @@ h3 {
   color: var(--sec-black);
 }
 
+.lineup_tabmenu_cont_list img:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
 .lineup_tabmenu_cont_list strong {
   display: block;
   margin-top: 10px;
   font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.lineup_tabmenu_cont_list strong.active {
+  color: var(--sec-light-blue);
 }
 
 .lineup_tabmenu_cont_list span {
@@ -629,6 +639,11 @@ h3 {
   margin-top: 45px;
   padding: 0 0 80px;
   background: var(--sec-white);
+  display: none;
+}
+
+.lineup_select.active {
+  display: block;
 }
 
 .lineup_select_layer {
@@ -849,6 +864,7 @@ h3 {
 .explorer_tabmenu_list li {
   border-right: 1px solid #ccc;
 }
+
 .explorer_tabmenu_list li:last-child {
   border-right: 0;
 }
@@ -856,6 +872,11 @@ h3 {
 .explorer_tabmenu_list li button {
   padding: 0 15px;
   color: var(--sec-4-grey);
+  font-weight: 500;
+}
+
+.explorer_tabmenu_list li button.active {
+  color: var(--sec-light-blue);
 }
 
 .explorer_cont_bottom {
@@ -866,11 +887,15 @@ h3 {
   text-align: left;
 }
 
-.explorer_item {
+.explorer_item_wrap{
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.explorer_item:not(:first-of-type) {
+  display: none;
 }
 
 .explorer_item_tit strong {
@@ -913,7 +938,7 @@ h3 {
 
 .explorer_item_txt li span {
   color: var(--sec-4-grey);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-weight: 400;
 }
 
@@ -932,27 +957,33 @@ h3 {
   color: var(--sec-white);
 }
 
-
 .explorer_item_img {
   margin: 0 auto;
   display: flex;
 }
 
-.explorer_cont_inner {
-  display: flex;
+/* .explorer_cont_inner {
+  width: 100%;
+  background-color: #e4dcd3;
+}
+
+.explorer_inner_wrap {
   max-width: 1200px;
   width: 100%;
-  margin: 40px auto 0;
-  height: 894px;
-  background-color: var(--sec-middle-yellow);
+  margin: 0 auto;
+  padding: 40px 0 80px;
 }
 
 .explorer_inner {
-  width: 50%;
-  background-color: var(--sec-dark-yellow);
-}
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  
+} */
 
-.explorer_inner:first-child {
+
+
+.explorer_inner_cont:first-child {
   margin-right: 34px;
 }
 
