@@ -840,21 +840,22 @@ h3 {
   color: var(--sec-4-grey);
 }
 
-.explorere_tabmenu_list {
+.explorer_tabmenu_list {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.explorere_tabmenu_list li {
+.explorer_tabmenu_list li {
   border-right: 1px solid #ccc;
 }
-.explorere_tabmenu_list li:last-child {
+.explorer_tabmenu_list li:last-child {
   border-right: 0;
 }
 
-.explorere_tabmenu_list li button {
+.explorer_tabmenu_list li button {
   padding: 0 15px;
+  color: var(--sec-4-grey);
 }
 
 .explorer_cont_bottom {
@@ -904,6 +905,31 @@ h3 {
   height: 72px;
   text-align: center;
   border-right: 1px solid #ccc;
+}
+
+.explorer_item_txt li:last-child {
+  border-right: 0;
+}
+
+.explorer_item_txt li span {
+  color: var(--sec-4-grey);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.explorer_item_txt li p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.explorer_item_btn a {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sec-navy);
+  color: var(--sec-white);
 }
 
 
