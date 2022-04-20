@@ -962,7 +962,7 @@ h3 {
   display: flex;
 }
 
-/* .explorer_cont_inner {
+.explorer_cont_inner {
   width: 100%;
   background-color: #e4dcd3;
 }
@@ -978,14 +978,119 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  
-} */
-
-
+}
 
 .explorer_inner_cont:first-child {
   margin-right: 34px;
 }
+
+.inner_box {
+  padding: 60px 40px;
+  height: 774px;
+  text-align: left;
+  background: var(--sec-white);
+  box-shadow: 0 1px 20px 10px rgb(0 0 0 / 10%);
+}
+
+.inner_box_tit p {
+  font-size: 16px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.inner_line_wrap {
+  margin-top: 40px;
+  padding-bottom: 30px;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+.inner_cont {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid #ccc;
+}
+
+.inner_cont_left strong {
+  display: inline-block;
+  width: 84px;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.inner_cont_left span {
+  display: inline-block;
+  width: 210px;
+  padding: 20px;
+  background: var(--sec-bg-grey);
+  color: var(--sec-4-grey);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.model .inner_img {
+  display: inline-block;
+  width: 210px;
+  padding: 20px;
+  background: var(--sec-bg-grey);
+}
+
+.model strong {
+  vertical-align: top !important;
+}
+
+.model p {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 26px;
+  color: var(--sec-4-grey);
+  font-weight: 300;
+}
+
+.inner_cont_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  background: var(--sec-bg-grey);
+  text-align: center;
+  margin-left: 10px;
+}
+
+.circle_btn {
+  position: relative;
+  display: block;
+  margin: 0 auto 25px;
+  width: 36px;
+  height: 36px;
+  background: #002c5f;
+  border-radius: 100%;
+}
+
+.circle_btn::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: calc(50% - 7px);
+  width: 14px;
+  height: 2px;
+  background: var(--sec-white);
+}
+
+.circle_btn::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 1px);
+  height: 14px;
+  width: 2px;
+  background: var(--sec-white);
+}
+
+
 
 /* reservation_bar */
 .reservation_bar {
