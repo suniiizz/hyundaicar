@@ -902,101 +902,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="explorer_item">
-                  <div class="explorer_item_wrap">
-                    <div class="explorer_item_tit">
-                      <strong>1위</strong>
-                      <div class="explorer_model_tit">
-                        <h3>투싼</h3>
-                        <span>Inspiration</span>
-                      </div>
-                    </div>
-                    <ul class="explorer_item_txt">
-                      <li>
-                        <span>엔진</span>
-                        <p>1.6 가솔린 터보</p>
-                      </li>
-                      <li>
-                        <span>표준 연비</span>
-                        <p>12 km/ℓ</p>
-                      </li>
-                      <li>
-                        <span>구동방식</span>
-                        <p>2WD</p>
-                      </li>
-                    </ul>
-                    <div class="explorer_item_btn">
-                      <a href="#">
-                        <span>내 차 만들기</span>
-                      </a>
-                    </div>
-                    <div class="explorer_item_img">
-                      <img src="img/main-the-all-new-tucson-well-side.webp" alt="그랜저">
-                    </div>
-                  </div>
-                </div>
-                <div class="explorer_item">
-                  <div class="explorer_item_wrap">
-                    <div class="explorer_item_tit">
-                      <strong>1위</strong>
-                      <div class="explorer_model_tit">
-                        <h3>팰리세이드</h3>
-                        <span>Calligraphy</span>
-                      </div>
-                    </div>
-                    <ul class="explorer_item_txt">
-                      <li>
-                        <span>엔진</span>
-                        <p>가솔린 3.8</p>
-                      </li>
-                      <li>
-                        <span>표준 연비</span>
-                        <p>9.3 km/ℓ</p>
-                      </li>
-                      <li>
-                        <span>구동방식</span>
-                        <p>2WD</p>
-                      </li>
-                    </ul>
-                    <div class="explorer_item_btn">
-                      <a href="#">
-                        <span>내 차 만들기</span>
-                      </a>
-                    </div>
-                    <div class="explorer_item_img">
-                      <img src="img/main-palisade-20my-well-side.webp" alt="그랜저">
-                    </div>
-                  </div>
-                </div>
-                <div class="explorer_item">
-                  <div class="explorer_item_wrap">
-                    <div class="explorer_item_tit">
-                      <strong>1위</strong>
-                      <div class="explorer_model_tit">
-                        <h3>그랜저</h3>
-                        <span>Le Blanc(르블랑)</span>
-                      </div>
-                    </div>
-                    <ul class="explorer_item_txt">
-                      <li>
-                        <span>엔진</span>
-                        <p>스마트스트림 가솔린 2.5</p>
-                      </li>
-                      <li>
-                        <span>표준연비</span>
-                        <p>11.6 km/ℓ</p>
-                      </li>
-                    </ul>
-                    <div class="explorer_item_btn">
-                      <a href="#">
-                        <span>내 차 만들기</span>
-                      </a>
-                    </div>
-                    <div class="explorer_item_img">
-                      <img src="img/main-grandeur-21my-well-side.webp" alt="그랜저">
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -1017,23 +922,52 @@
                         <div class="inner_line_txt">
                           <strong>할부원금</strong>
                           <div class="inner_input_wrap">
-                            <input type="range" value="0" min="100,000" max="36,000,000" id="inner_input_in">
+                            <div class="inner_input_slider">
+                              <input type="range" value="100000" step="100000" min="100000" max="36000000" id="inner_input_in" onchange='range_change(this)'>
+                            </div>
+                            <div class="input_marks">
+                              <div class="marks_txt">100,000</div>
+                              <div class="marks_txt">36,000,000</div>
+                            </div>
+                            <div class="inner_input_box">
+                              <input type='text' id='inner_value'>
+                            </div>
                           </div>
                         </div>
                         <div class="inner_line_txt">
                           <strong>할부기간</strong>
+                          <div class="inner_input_wrap">
+                            <div class="inner_input_slider">
+                              <input type="range" value="36" step="12" min="36" max="48" id="inner_input_in">
+                            </div>
+                            <div class="input_marks">
+                              <div class="marks_txt">36</div>
+                              <div class="marks_txt">48</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="inner_txt_wrap">
                         <strong>할부상품</strong>
                         <div class="txt_input_wrap">
-                          <select name="할부상품 선택" id="txt_input">
-                            <option value="선택1">표준형</option>
-                            <option value="선택2">거치형</option>
-                            <option value="선택3">유예형</option>
-                            <option value="선택4">잔가보장형</option>
-                          </select>
-                          <div class="dropdown_arrow"></div>
+                          <div class="txt_input">
+                            <div class="txt_input_select">
+                              <span class="select_txt">표준형</span>
+                              <div class="dropdown_arrow"><i class="arrow"></i></div>
+                            </div>
+                            <ul class="txt_input_list">
+                              <li value="선택1">표준형</li>
+                              <li value="선택2">거치형</li>
+                              <li value="선택3">유예형</li>
+                              <li value="선택4">잔가보장형</li>
+                            </ul>
+                            <select name="할부상품 선택" id="txt_input">
+                              <option value="선택1">표준형</option>
+                              <option value="선택2">거치형</option>
+                              <option value="선택3">유예형</option>
+                              <option value="선택4">잔가보장형</option>
+                            </select>
+                          </div>
                           <span class="amount">월 812,091 원</span>
                           <div class="price">유예금 19,580,000원 (55%)</div>
                         </div>
@@ -1396,6 +1330,36 @@
           $('.explorer_cont_layer > div').eq(idx).show();
         })
       });
+
+      //explorer select
+      let selectFlag;
+      $('.txt_input_select').click(function(){
+        $(this).toggleClass('selected');
+        if($(this).hasClass('selected')) {
+          $('.txt_input_list').show();
+        } else {
+          $('.txt_input_list').hide();
+        }
+      });
+
+      
+      //explorer input
+      $('.txt_input_list li').click(function(){
+        let value = $(this).attr('value');
+
+        $('.select_txt').text($(this).text());
+        $('#txt_input').val(value);
+        $('.txt_input_list').hide();
+      })
+
+      $('#inner_input_in').click('#inner_input_in', function(){
+        var val = $(this).val();
+        $(this).css('background', 'linear-gradient(to right, #007fa8 0%, #007fa8 '+ val +'%, #999999 ' + val + '%, #999999 100%)');
+      });
+
+      function range_change(obj) {
+        document.getElementById('inner_value').value=obj.value;
+      };
 
   </script>
 
