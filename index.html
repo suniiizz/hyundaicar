@@ -1010,7 +1010,7 @@
                         <p>할부 금액으로 맞춤형 금융 상품을 검색해보세요.</p>
                       </div>
                       <div class="inner_line_wrap">
-                        <!-- <div class="inner_line_txt">
+                        <div class="inner_line_txt">
                           <strong>모델</strong>
                           <span>그랜저 자가용 스마트스트림 가솔린 2.5 Le Blanc(르블랑)</span>
                         </div>
@@ -1018,14 +1018,32 @@
                           <strong>할부원금</strong>
                           <div class="inner_input_wrap">
                             <input type="range" value="0" min="100,000" max="36,000,000" id="inner_input_in">
-                            <div id="inner_input_out"></div>
                           </div>
-                        </div> -->
-                        <div class="inner_line_txt"></div>
+                        </div>
+                        <div class="inner_line_txt">
+                          <strong>할부기간</strong>
+                        </div>
                       </div>
-                      <div class="inner_txt_wrap"></div>
-                      <div class="inner_btn_wrap"></div>
-                    </div>
+                      <div class="inner_txt_wrap">
+                        <strong>할부상품</strong>
+                        <div class="txt_input_wrap">
+                          <select name="할부상품 선택" id="txt_input">
+                            <option value="선택1">표준형</option>
+                            <option value="선택2">거치형</option>
+                            <option value="선택3">유예형</option>
+                            <option value="선택4">잔가보장형</option>
+                          </select>
+                          <div class="dropdown_arrow"></div>
+                          <span class="amount">월 812,091 원</span>
+                          <div class="price">유예금 19,580,000원 (55%)</div>
+                        </div>
+                      </div>
+                      <div class="inner_btn_wrap">
+                        <a href="#">
+                          <span>할부 상품 자세히 보기</span>
+                        </a>
+                      </div>
+                  </div>
                   </div>
                   <div class="explorer_inner_cont inner_2">
                     <div class="inner_box">
@@ -1043,23 +1061,23 @@
                                 <p>그랜저 자가용 스마트스트림 가솔린 2.5 Le Blanc(르블랑)</p>
                               </div>
                             </li>
-                            <li class="price">
+                            <li>
                               <strong>가격</strong>
                               <span>3,600만원</span>
                             </li>
-                            <li class="km">
+                            <li>
                               <strong>연비</strong>
                               <span>11.6 km/ℓ</span>
                             </li>
-                            <li class="maximum">
+                            <li>
                               <strong>최고출력</strong>
                               <span>198ps / 6100rpm</span>
                             </li>
-                            <li class="torque">
+                            <li>
                               <strong>최대토크</strong>
                               <span>25.3kgf·m / 4000rpm</span>
                             </li>
-                            <li class="upkeep">
+                            <li>
                               <strong>3년 유지비</strong>
                               <span>15,066,690 원</span>
                             </li>
@@ -1077,7 +1095,6 @@
                 </div>
               </div>
             </div>
-          </div>
 
           <!-- reservation_bar -->
           <div class="reservation_bar">
