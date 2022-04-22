@@ -60,7 +60,7 @@
       </div>
       <ul class="nav_bottom_menu">
         <li class="nav_bottom_menu_list">
-          <a href="#">모델</a>
+          <a href="#" class="active">모델</a>
         </li>
         <li class="nav_bottom_menu_list">
           <a href="#">멤버십&차량관리</a>
@@ -79,7 +79,7 @@
         </li>
         <li class="nav_bottom_menu_list">
           <a href="#">
-            <img src="img/hyundai_shop_logo.png" alt="">
+            <img src="img/hyundai_shop_logo.png" alt="#">
           </a>
         </li>
       </ul>
@@ -1250,6 +1250,15 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script>
+    //nav
+    $(document).ready(function(){
+        $('.nav_bottom_menu_list').click(function(){
+          let idx = $(this).index();
+          $('.nav_bottom_menu_list > a').removeClass('active')
+          $('.nav_bottom_menu_list > a').eq(idx).addClass('active');
+        })
+      });
+
     //banner
     let swiper = new Swiper(".banner_slide.mySwiper", {
       slidesPerView: 1,
