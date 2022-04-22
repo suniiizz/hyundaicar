@@ -60,10 +60,29 @@
       </div>
       <ul class="nav_bottom_menu">
         <li class="nav_bottom_menu_list">
-          <a href="#" class="active">모델</a>
+          <a href="#" class="list_model">모델</a>
+          <div class="sub_wrap">
+            <div class="sub_cont">
+              <h4 class="gnb_tit">구매정보</h4>
+              <div class="icon_menu">
+                <ul>
+                  <li><a href="#" class="btn_mycar">내 차 만들기(견적)</a></li>
+                  <li><a href="#" class="btn_benefit">이달의 구매혜택</a></li>
+                  <li><a href="#" class="btn_consult">구매상담신청</a></li>
+                  <li><a href="#" class="btn_driving">시승신청</a></li>
+                  <li><a href="#" class="btn_price">카탈로그/가격표</a></li>
+                  <li><a href="#" class="btn_calc">간편 할부계산기</a></li>
+                  <li><a href="#" class="btn_recommend">내 차 추천받기</a></li>
+                  <li><a href="#" class="btn_comperison">모델비교</a></li>
+                  <li><a href="#" class="btn_search">상세모델검색</a></li>
+                  <li><a href="#" class="btn_spac">자동차 사양백과</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </li>
         <li class="nav_bottom_menu_list">
-          <a href="#">멤버십&차량관리</a>
+          <a href="#" class="list_memder">멤버십&차량관리</a>
         </li>
         <li class="nav_bottom_menu_list">
           <a href="#">이벤트</a>
@@ -1077,7 +1096,7 @@
               <li class="event_item">
                 <div class="event_item_txt">
                   <div class="event_item_img">
-                    <img src="/img/event-bluemembers-hmc-reservation-everland-spring-banner-739x489.jpeg" alt="푸르른 봄 현대자동차 블루멤버스와 함께 나와 봄 이벤트">
+                    <img src="img/event-bluemembers-hmc-reservation-everland-spring-banner-739x489.jpeg" alt="푸르른 봄 현대자동차 블루멤버스와 함께 나와 봄 이벤트">
                   </div>
                   <p>따뜻한 봄엔 블루멤버스와 나가보아요.</p>
                   <div class="event_item_tit">푸르른 봄 현대자동차 블루멤버스와 함께 나와 <br> 봄 이벤트</div>
@@ -1088,7 +1107,7 @@
               <li class="event_item">
                 <div class="event_item_txt">
                   <div class="event_item_img">
-                    <img src="/img/event-hc-purchase-benefits-202204-banner-739x489.jpeg" alt="자세히보기_4월 신차 구매 혜택">
+                    <img src="img/event-hc-purchase-benefits-202204-banner-739x489.jpeg" alt="자세히보기_4월 신차 구매 혜택">
                   </div>
                   <p>Hyundai Mobility카드만의 강력한 구매 프로그램.</p>
                   <div class="event_item_tit">4월 신차 구매 혜택</div>
@@ -1251,13 +1270,16 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script>
     //nav
-    $(document).ready(function(){
-        $('.nav_bottom_menu_list').click(function(){
-          let idx = $(this).index();
-          $('.nav_bottom_menu_list > a').removeClass('active')
-          $('.nav_bottom_menu_list > a').eq(idx).addClass('active');
-        })
-      });
+    $('.nav_bottom_menu_list').click(function() {
+      let idx = $(this).index();
+      $(this).toggleClass('active');
+
+      if($(this).hasClass('active')) {
+        $('.sub_wrap').show(), $('.nav_bottom_menu_list > a').removeClass('active'), $('.nav_bottom_menu_list > a').eq(idx).addClass('active');
+      } else {
+        $('.sub_wrap').hide(), $('.nav_bottom_menu_list > a').removeClass('active');
+      }
+    });
 
     //banner
     let swiper = new Swiper(".banner_slide.mySwiper", {

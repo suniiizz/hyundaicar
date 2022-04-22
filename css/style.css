@@ -155,7 +155,6 @@ h3 {
 .nav_bottom_menu {
   display: flex;
   align-items: center;
-  /* margin-right: 100px; */
 }
 
 .nav_bottom_menu_list {
@@ -179,6 +178,154 @@ h3 {
   font-weight: 600;
 }
 
+.sub_wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--sec-white);
+  display: none;
+}
+
+.sub_cont {
+  max-width: 1120px;
+  margin: 0 auto;
+  z-index: 4;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub_cont h4 {
+  width: 15%;
+  font-size: 15px;
+  color: var(--sec-black);
+  text-align: center;
+}
+
+.icon_menu {
+  width: calc(100% - 200px);
+  padding: 0 0 40px 35px;
+  border-left: 1px solid #e5e5e5;
+}
+
+.icon_menu ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon_menu ul li {
+  width: 20%;
+  min-width: 130px;
+  height: 105px;
+  position: relative;
+}
+
+.icon_menu ul li a {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  padding-top: 60px;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  color: var(--sec-4-grey);
+  font-weight: 500;
+}
+
+.icon_menu ul li a:hover {
+  color: var(--sec-light-blue);
+}
+
+.icon_menu ul li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 70%;
+  width: 1px;
+  height: 48px;
+  margin-top: -24px;
+  background: #e5e5e5;
+}
+.icon_menu ul li:nth-child(1)::before {
+  content: "";
+  display: none;
+}
+.icon_menu ul li:nth-child(6)::before {
+  content: "";
+  display: none;
+}
+
+.btn_mycar {
+  background: url(../img/icon_mycar_gnb.png) center no-repeat;
+}
+.btn_mycar:hover {
+  background: url(../img/icon_mycar_gnb_on.png) center no-repeat;
+}
+
+.btn_benefit {
+  background: url(../img/icon_gift_gnb.png) center no-repeat;
+}
+.btn_benefit:hover {
+  background: url(../img/icon_gift_gnb_on.png) center no-repeat;
+}
+
+.btn_consult {
+  background: url(../img/icon_purchase_gnb.png) center no-repeat;
+}
+.btn_consult:hover {
+  background: url(../img/icon_purchase_gnb_on.png) center no-repeat;
+}
+
+.btn_driving {
+  background: url(../img/icon_drive_gnb.png) center no-repeat;
+}
+.btn_driving:hover {
+  background: url(../img/icon_drive_gnb_on.png) center no-repeat;
+}
+
+.btn_price {
+  background: url(../img/icon_catalog_price.png) center no-repeat;
+}
+.btn_price:hover {
+  background: url(../img/icon_catalog_pric_on.png) center no-repeat;
+}
+
+.btn_calc {
+  background: url(../img/icon_calc_gnb.png) center no-repeat;
+}
+.btn_calc:hover {
+  background: url(../img/icon_calc_gnb_on.png) center no-repeat;
+}
+
+.btn_recommend {
+  background: url(../img/icon_mycarsearch.png) center no-repeat;
+}
+.btn_recommend:hover {
+  background: url(../img/icon_mycarsearch_on.png) center no-repeat;
+}
+
+.btn_comperison {
+  background: url(../img/icon_comperison.png) center no-repeat;
+}
+.btn_comperison:hover {
+  background: url(../img/icon_comperison_on.png) center no-repeat;
+}
+
+.btn_search {
+  background: url(../img/icon_searchfilter.png) center no-repeat;
+}
+.btn_search:hover {
+  background: url(../img/icon_searchfilter_on.png) center no-repeat;
+}
+
+.btn_spac {
+  background: url(../img/icon_spac.png) center no-repeat;
+}
+.btn_spac:hover {
+  background: url(../img/icon_spac_on.png) center no-repeat;
+}
 
 /* banner */
 #banner {
@@ -672,7 +819,6 @@ h3 {
   display: inline-block;
   top: -12px;
   left: 140px;
-  /* left: calc(50% - 12px); */
   width: 24px;
   height: 24px;
 }
