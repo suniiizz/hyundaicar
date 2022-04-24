@@ -10,7 +10,6 @@
   }
 
   .explorer_inner {
-    /* flex-wrap: wrap; */
     flex-direction: column;
     align-items: center;
   }
@@ -43,15 +42,20 @@
 }
 
 @media screen and (max-width: 1024px) {
-  /* benefit */
-.benefit_item {
-  width: 33.333%;
-  padding: 0;
-}
+  /* nav */
+  .nav_bottom {
+    padding: 0 30px;
+  }
 
-.benefit_item:last-child {
-  display: none;
-}
+  /* benefit */
+  .benefit_item {
+    width: 33.333%;
+    padding: 0;
+  }
+
+  .benefit_item:last-child {
+    display: none;
+  }
 
   .benefit_item_inner {
     margin: 0 8.5px;
@@ -110,6 +114,72 @@
     text-align: center;
   }
 
+  /* explorer */
+  .explorer_cont_top {
+    padding: 0;
+    max-width: 709px;
+    width: 100%;
+  }
+
+  .explorer_tabmenu_txt {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .explorer_tabmenu_txt span {
+    margin-left: 0;
+  }
+
+  .explorer_tabmenu_list {
+    align-items: flex-end;
+  }
+
+  .explorer_cont_bottom {
+    padding: 0;
+    max-width: 709px;
+    width: 100%;
+  }
+
+  .explorer_item_wrap {
+    display: block;
+    position: relative;
+  }
+
+  .explorer_item_txt {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .explorer_model_tit h3 {
+    font-size: 18px;
+    font-weight: 800;
+    display: inline;
+  }
+
+  .explorer_model_tit span {
+    display: inline;
+    font-size: 16px !important;
+    font-weight: 100;
+    margin-top: 0;
+    margin-left: 15px;
+  }
+
+  .explorer_item_btn {
+    position: absolute;
+    right: 0;
+    top: 1vh;
+  }
+
+  .inner_box_tit {
+    display: flex;
+    align-items: center;
+  }
+
+  .inner_box_tit p {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+
   /* reservation_bar */
   .reservation_bar {
     padding: 30px 0;
@@ -119,5 +189,28 @@
   .reservation_cont {
     flex-direction: column;
     text-align: center;
+  }
+
+  /* news */
+  .news_container {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  /* news */
+  .news_cont_txt {
+    width: 33.3333%;
+  }
+
+  .tag {
+    top: 20px;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav_bottom_menu_list a {
+    line-height: 0;
   }
 }
