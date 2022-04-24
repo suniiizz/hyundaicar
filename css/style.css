@@ -1,15 +1,5 @@
 :root {
   /* Color */
-  --sec-light-yellow: #fff3e0;
-  --sec-middle-yellow: #ffe0b2;
-  --sec-dark-yellow: #ffcc80;
-  --sec-superdark-yellow: #ffb74d;
-
-  --sec-light-mint: #e8f5e9;
-  --sec-middle-mint: #c8e6c9;
-  --sec-dark-mint: #a5d6a7;
-  --sec-superdark-mint: #75a478;
-
   --sec-white: #ffffff;
   --sec-black: #000000;
   --sec-light-blue: #007fa8;
@@ -629,14 +619,13 @@ h3 {
 
 .benefit_set {
   display: flex;
-  height: 490px;
-  margin: 0 21px 50px;
+  margin: 0 21px 60px;
 }
 
 .benefit_item {
   width: 25%;
   height: 100%;
-  margin: 0 9px;
+  padding: 0 9px;
 }
 
 .benefit_item_inner {
@@ -747,19 +736,15 @@ h3 {
   font-weight: 500;
 }
 
-.lineup_tabmenu_cont {
+.lineup_tabmenu_cont_wrap {
   margin-top: 30px;
 }
 
-.lineup_tabmenu_cont2,
-.lineup_tabmenu_cont3,
-.lineup_tabmenu_cont4,
-.lineup_tabmenu_cont5,
-.lineup_tabmenu_cont6 {
+.lineup_tabmenu_cont:not(:first-of-type) {
   display: none;
 }
 
-.lineup_tabmenu_cont ul{
+.lineup_tabmenu_cont_wrap ul {
   display: flex;
   justify-content: center;
 }
@@ -798,10 +783,6 @@ h3 {
   padding: 0 0 80px;
   background: var(--sec-white);
   display: none;
-}
-
-.lineup_select.active {
-  display: block;
 }
 
 .lineup_select_layer {
@@ -919,6 +900,7 @@ h3 {
   background: url(../img/bg_main_filter.webp) no-repeat;
   display: flex;
   justify-content: center;
+  background-size: cover;
 }
 
 .filter_cont {
@@ -984,7 +966,7 @@ h3 {
 
 /* explorer */
 .explorer {
-  padding: 80px 0;
+  padding: 80px 0 0 0;
   background-color: var(--sec-bg-grey);
 }
 
@@ -1030,6 +1012,7 @@ h3 {
   padding: 0 15px;
   color: var(--sec-4-grey);
   font-weight: 500;
+  font-size: 16px;
 }
 
 .explorer_tabmenu_list li button.active {
@@ -1116,7 +1099,11 @@ h3 {
 
 .explorer_item_img {
   margin: 0 auto;
-  display: flex;
+  width: 100%;
+}
+
+.explorer_item_img img {
+  width: 100%;
 }
 
 .explorer_cont_inner {
@@ -1134,7 +1121,6 @@ h3 {
 .explorer_inner {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
 }
 
 .explorer_inner_cont {
@@ -1173,7 +1159,6 @@ h3 {
   border-bottom: 2px solid #ccc;
 }
 
-
 .inner_line_txt {
   padding: 0;
   margin-top: 30px;
@@ -1187,6 +1172,10 @@ h3 {
 
 .inner_line_txt strong:first-child {
   padding: 0;
+}
+
+.inner_line_txt span {
+  font-size: 16px;
 }
 
 .inner_input_wrap {
@@ -1586,13 +1575,12 @@ input[type=range]::-moz-range-thumb{
 }
 
 .news_tag_wrap {
-  width: 1120px;
+  width: 100%;
   margin: 60px auto -6px;
   text-align: center;
 }
 
 .news_tag {
-  width: 100%;
   display: flex;
   justify-content: center;
 }
