@@ -218,6 +218,15 @@
   .news_container {
     padding: 0 30px;
   }
+
+  /* footer */
+  #footer {
+    padding: 40px 40px;
+  }
+
+  .footer_menu {
+    margin-left: 30px;
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -240,14 +249,95 @@
   h2 {
     font-size: 27px;
   }
+  h3 {
+    font-size: 16px;
+  }
 
   /* nav */
   .nav_wrap {
     display: none;
+    top: 55px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .nav_top {
+    width: 100%;
+    height: 48px;
+    background:var(--sec-navy);
+    padding: 0;
+  }
+
+  .nav_top_menu {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .nav_top_menu_inner {
+    color: var(--sec-white);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav_top_menu_inner a,
+  .lan-select {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav_top_menu_inner .btn-link::after,
+  .nav_top_menu_inner .lan-select::after {
+    display: none;
+  }
+
+  .nav_top_menu_inner:last-child,
+  .nav_top_menu_inner:nth-child(6) {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav_bottom {
+    padding: 0;
+  }
+
+  .nav_bottom_menu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav_bottom_menu_list {
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .nav_bottom_menu_list a {
+    padding: 20px 30px;
+    width: 100%;
+    bottom: none;
+  }
+
+  .nav_bottom_menu_list img {
+    width: 49px;
   }
 
   .nav_wrap_m {
     display: block;
+  }
+
+  .sub_wrap {
+    opacity: 0;
   }
 
   /* banner */
@@ -317,6 +407,7 @@
     color: var(--sec-white);
     background: var(--sec-6-grey);
     position: relative;
+    font-size: 16px;
   }
 
   .option_select::after {
@@ -399,6 +490,14 @@
     margin-right: 15px;
   }
 
+  .filter_box_wrap a span {
+    font-size: 14px;
+  }
+
+  .filter_box_wrap a p {
+    font-size: 12px;
+  }
+
   .filter_box_wrap .filter_bar_search {
     background-position: -138px 0;
   }
@@ -413,6 +512,59 @@
 
   .explorer_cont_top {
     margin-top: 30px;
+  }
+
+  .inner_box_tit {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inner_box_tit p {
+    font-size: 13px;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .inner_line_txt strong {
+    font-size: 14px;
+  }
+
+  .inner_txt_wrap strong {
+    font-size: 14px;
+  }
+
+  .inner_cont {
+    flex-direction: column;
+  }
+
+  .inner_cont_left {
+    background: var(--sec-bg-grey);
+    margin-bottom: 15px;
+  }
+
+  .inner_cont_left strong {
+    font-size: 14px;
+    width: 32%;
+    padding: 10px 0 10px 15px;
+  }
+
+  .inner_cont_left span {
+    padding: 10px 0;
+    width: auto;
+  }
+
+  .model .inner_img {
+    padding: 10px 0;
+    width: auto;
+  }
+
+  .model .inner_img img {
+    width: 50%;
+  }
+
+  .inner_cont_right {
+    width: 100%;
+    min-height: 190px;
   }
 
   /* reservation_bar */
@@ -454,6 +606,14 @@
     margin-right: 15px;
   }
 
+  .reservation_box_wrap a span {
+    font-size: 14px;
+  }
+
+  .reservation_box_wrap a p {
+    font-size: 12px;
+  }
+
   .reservation_box_wrap .reservation_box_driving {
     background-position: -223px 0;
   }
@@ -479,10 +639,99 @@
 
   .event_item {
     margin-bottom: 50px;
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .event_item_txt p,
+  .event_item_txt > span {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .event_item_txt .event_item_tit {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .event_item_txt a {
+    width: 100%;
   }
 
   /* news */
   #news {
     padding-top: 50px;
+  }
+
+  .news_tag_wrap {
+    margin-top: 30px;
+  }
+
+  .news_cont {
+    margin-top: 30px;
+  }
+
+  .news_cont_txt {
+    width: 50%;
+  }
+
+  /* footer */
+  #footer {
+    padding: 30px 40px;
+  }
+  .footer_top {
+    position: relative;
+  }
+
+  .footer_logo {
+    position: absolute;
+    left: 10px;
+    top: auto;
+    bottom: 140px;
+  }
+
+  .footer_logo img {
+    width: 45px;
+  }
+
+  .footer_menu {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .footer_menu ul {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .footer_menu ul li {
+    width: 50%;
+    margin: 7px 0;
+    padding-bottom: 20px;
+    float: left;
+  }
+
+  .footer_menu ul li::after {
+    display: none;
+  }
+
+  .service {
+    margin: 7px 0;
+    padding-bottom: 20px;
+  }
+
+  .copyright {
+    padding: 26px 0 26px 80px;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .footer_site {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .social {
+    justify-content: center;
   }
 }

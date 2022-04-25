@@ -139,6 +139,7 @@ h3 {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  padding: 0 30px;
 }
 
 .nav_bottom_menu {
@@ -1173,7 +1174,6 @@ h3 {
 
 .inner_box {
   padding: 60px 40px;
-  height: 774px;
   text-align: left;
   background: var(--sec-white);
   box-shadow: 0 1px 20px 10px rgb(0 0 0 / 10%);
@@ -1405,7 +1405,7 @@ input[type=range]::-moz-range-thumb{
   font-weight: 300;
 }
 
-.model .inner_img {
+  .model .inner_img {
   display: inline-block;
   width: 210px;
   padding: 20px;
@@ -1801,7 +1801,7 @@ overflow: hidden;
   margin: 0 13px;
   display: inline-block;
   vertical-align: middle;
-  background-color: #444;
+  background-color: var(--sec-6-grey);
 }
 
 .service {

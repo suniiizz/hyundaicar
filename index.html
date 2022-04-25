@@ -15,8 +15,7 @@
   <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 </head>
 
@@ -1345,7 +1344,7 @@
           </li>
           <li>
             <img src="img/footer-mark04.png" alt="2021년 한국서비스품질지수 (KS-SQI) 자동차 A/S 부문 7년 연속 1위">
-            <span>자동차 A/S 부문 7년 연속 1위</span>
+            <span>자동차 A/S 7년 연속 1위</span>
           </li>
           <li><img src="img/footer-mark05.png" alt="2021년 한국품질만족지수    (KS-QEI) 조사 12개 부문 1위">
             <span>2021년 한국품질만족지수 조사 12개 부문 1위</span>
@@ -1369,6 +1368,18 @@
           $('.sub_wrap').show(), $('.nav_bottom_menu_list > a').removeClass('active'), $('.nav_bottom_menu_list > a').eq(idx).addClass('active');
         } else {
           $('.sub_wrap').hide(), $('.nav_bottom_menu_list > a').removeClass('active');
+        }
+    });
+
+    //nav_mobile
+    $('.menu-btn').click(function(){
+      let idx = $(this).index();
+      $(this).toggleClass('open');
+
+      if($(this).hasClass('open')) {
+          $('.nav_wrap').show(), $('.nav_bottom_menu_list > a').removeClass('open');
+        } else {
+          $('.nav_wrap').hide(), $('.nav_bottom_menu_list > a').removeClass('open');
         }
     });
 
