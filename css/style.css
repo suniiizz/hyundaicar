@@ -567,15 +567,18 @@ h3 {
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding: 0 20px;
 }
 
 .login_txt span {
   font-size: 16px;
   color: var(--sec-4-grey);
   margin-right: 45px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.login_before {
+footer_bottom {
   display: flex;
 }
 
@@ -919,6 +922,10 @@ h3 {
   margin-right: 10px;
 }
 
+.modal_btn a:last-child {
+  margin-right: 0;
+}
+
 .modal_inner_right {
   width: 600px;
 }
@@ -1101,7 +1108,6 @@ h3 {
   flex-direction: column;
   justify-content: center;
   width: 230px;
-  height: 72px;
   text-align: center;
   border-right: 1px solid #ccc;
 }

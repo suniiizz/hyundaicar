@@ -53,7 +53,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width:800px) and (max-width: 1200px) {
   /* lineup */
   .lineup_select_layer {
     padding: 0 40px;
@@ -290,6 +290,7 @@
   .lan-select {
     width: 100%;
     text-align: center;
+    padding: 0 5px;
   }
 
   .nav_top_menu_inner .btn-link::after,
@@ -362,6 +363,21 @@
     width: calc(50% - 5px);
   }
 
+  /* login */
+  .login_txt {
+    flex-direction: column;
+  }
+
+  .login_txt span {
+    align-items: center;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .login_before {
+    margin-top: 10px;
+  }
+
   /* benefit */
   .benefit {
     padding: 50px 15px;
@@ -394,7 +410,7 @@
 
   /* lineup */
   .lineup {
-    padding-top: 50px;
+    padding: 50px 0 30px 0;
   }
 
   .option_select {
@@ -447,8 +463,77 @@
     background: var(--sec-white);
   }
 
+  .lineup_tabmenu_cont ul {
+    padding: 0 2.5%;
+  }
+
+  .lineup_tabmenu_cont_list:nth-child(3),
+  .lineup_tabmenu_cont_list:nth-child(4) {
+    display: none;
+  }
+
+  .lineup_tabmenu_cont_list {
+    min-width: 123px;
+    max-width: 246px;
+    width: 100%;
+    height: auto;
+  }
+
+  .modal_inner {
+    padding: 40px 20px 40px 30px;
+  }
+
   .modal_arrow {
-    left: 90px;
+    left: 230px;
+  }
+
+  .modal_inner_left {
+    width: 100%;
+  }
+
+  .modal_txt h2, .modal_txt span {
+    font-size: 21px;
+  }
+
+  .modal_txt p {
+    font-size: 13px;
+  }
+
+  .modal_txt_list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal_txt_list li:first-child {
+    border-right: none;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .modal_txt_list li p {
+    margin: 0;
+    padding-right: 15px;
+  }
+
+  .modal_txt_list li span {
+    padding: 0;
+  }
+
+  .modal_btn {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .modal_btn a {
+    width: calc(50% - 10px);
+    margin-top: 10px;
+  }
+
+  .modal_inner_right {
+    max-width: 450px;
+    min-width: 225px;
   }
 
   /* filter_bar */
@@ -510,13 +595,83 @@
     padding-top: 50px;
   }
 
+  .inner_box_tit {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .explorer_cont_top {
     margin-top: 30px;
   }
 
-  .inner_box_tit {
+  .explorer_tabmenu {
     flex-direction: column;
-    align-items: flex-start;
+    padding: 0 15px;
+  }
+  
+  .explorer_tabmenu_txt > span {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .explorer_tabmenu_list {
+    justify-content: flex-start;
+    margin: 30px 0 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .explorer_tabmenu_list li button {
+    padding: 0 10px;
+  }
+
+  .explorer_item {
+    padding: 0 15px;
+  }
+
+  .explorer_item_tit .explorer_model_tit h3 {
+    display: block;
+  }
+
+  .explorer_item_tit .explorer_model_tit span {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .explorer_item_txt {
+    margin: 30px 0;
+    justify-content: start;
+    flex-direction: column;
+  }
+
+  .explorer_item_txt li {
+    flex-direction: row;
+    justify-content: start;
+    border-right: none;
+    margin-bottom: 15px;
+  }
+
+  .explorer_item_txt li span {
+    margin: 0;
+    padding-right: 15px;
+  }
+
+  .explorer_item_txt li p {
+    font-size: 14px;
+  }
+
+  .explorer_item_img {
+    max-width: 225px;
+  }
+
+  .explorer_inner_wrap {
+    padding: 0 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .inner_box {
+    padding: 30px 20px;
   }
 
   .inner_box_tit p {
@@ -525,12 +680,37 @@
     margin-top: 15px;
   }
 
-  .inner_line_txt strong {
-    font-size: 14px;
+  .inner_line_txt {
+    flex-direction: column;
   }
 
+  .inner_line_txt strong,
   .inner_txt_wrap strong {
     font-size: 14px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .inner_input_wrap {
+    width: 100%;
+  }
+
+  .inner_txt_wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .txt_input_wrap {
+    width: 100%;
+  }
+  
+  .amount,
+  .price {
+    font-size: 16px;
+  }
+
+  .inner_btn_wrap {
+    justify-content: center;
   }
 
   .inner_cont {
@@ -733,5 +913,10 @@
 
   .social {
     justify-content: center;
+  }
+
+  /* footer */
+  .footer_bottom ul li {
+    flex-direction: column;
   }
 }
