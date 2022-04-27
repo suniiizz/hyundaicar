@@ -836,7 +836,7 @@ h3 {
   position: absolute;
   display: inline-block;
   top: -12px;
-  left: 140px;
+  left: 50%;
   width: 24px;
   height: 24px;
 }
