@@ -464,7 +464,7 @@
   }
 
   .lineup_tabmenu_cont_list img:hover {
-    transform: none;
+    transform: scale(0);
     transition: none;
   }
 
