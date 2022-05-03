@@ -1318,7 +1318,7 @@ input[type=range]::-moz-range-thumb{
   background: var(--sec-white);
   border: 1px solid #e4e7ed;
   box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
-  color: var(--);
+  z-index: 10;
 }
 
 .txt_input_list li {

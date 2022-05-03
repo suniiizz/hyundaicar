@@ -463,6 +463,11 @@
     padding: 0 2.5%;
   }
 
+  .lineup_tabmenu_cont_list img:hover {
+    transform: none;
+    transition: none;
+  }
+
   .lineup_tabmenu_cont_list:nth-child(3),
   .lineup_tabmenu_cont_list:nth-child(4) {
     display: none;
@@ -845,6 +850,20 @@
 
   .news_cont_txt {
     width: 50%;
+  }
+
+  .news_cont_txt:hover .news_cont_desc {
+    opacity: 0;
+  }
+  .news_cont_txt:hover .tag {
+    border: none;
+    background: none;
+  }
+
+  .tag {
+    top: 5px;
+    left: 5px;
+    font-size: 12px;
   }
 
   /* footer */
